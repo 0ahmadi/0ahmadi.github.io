@@ -21,7 +21,7 @@
 html { scroll-behavior: smooth; }
 
 @media (hover: hover) and (pointer: fine) {
-  html { zoom: 150%; }
+  html { zoom: 100%; }
 }
 
 body {
