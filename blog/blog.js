@@ -60,7 +60,7 @@ function highlightCodeIn(container) {
 
 // --- Fetch the posts manifest ---
 async function fetchPostsManifest() {
-  const res = await fetch('https://github.com/0ahmadi/0ahmadi.github.io/blob/main/blog/posts.json');
+  const res = await fetch('blog/posts.json');
   if (!res.ok) throw new Error('Could not load posts.json');
   return res.json();
 }
