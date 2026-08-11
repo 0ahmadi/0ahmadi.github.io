@@ -26,7 +26,6 @@ def leaky_integrate_and_fire(v, i, tau=10.0, dt=1.0):
 
 ## Images
 
-![Membrane potential trace](../assets/blog/lif-trace.png)
 
 ## Tables and quotes
 
