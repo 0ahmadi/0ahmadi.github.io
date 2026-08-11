@@ -1,1 +1,9 @@
-
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello, Blog",
+    "date": "2026-08-11",
+    "excerpt": "Kicking off a place to write about what I'm learning — math, code, and everything in between.",
+    "tags": ["meta"]
+  }
+]
