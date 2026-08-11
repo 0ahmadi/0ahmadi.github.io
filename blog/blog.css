@@ -1,1 +1,184 @@
+/* ============================================================
+   Blog — reuses variables defined in ../style.css
+   ============================================================ */
 
+.blog-nav-fix a[href="blog.html"],
+.nav-links a.active-page {
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+}
+
+/* ---- Post list ---- */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.post-item {
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.post-item:first-child { padding-top: 0.5rem; }
+
+.post-item-date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+}
+
+.post-item-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0.25rem 0 0.4rem;
+}
+.post-item-title a { color: var(--text); }
+.post-item-title a:hover { color: var(--link-hover); text-decoration: none; }
+
+.post-item-excerpt {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.post-item-tags {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.post-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 2px;
+}
+
+/* ---- Single post ---- */
+.post-header { margin-bottom: 2rem; }
+.post-back {
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.post-back:hover { color: var(--text); }
+
+.post-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-body {
+  margin-top: 2.5rem;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.post-body h1, .post-body h2, .post-body h3 {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.post-body h1 { font-size: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; }
+.post-body h3 { font-size: 1.05rem; border-bottom: none; }
+
+.post-body p { margin-bottom: 1.2rem; }
+
+.post-body a { color: var(--link); }
+.post-body a:hover { color: var(--link-hover); }
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.2rem 1.4rem;
+}
+.post-body li { margin-bottom: 0.4rem; }
+
+.post-body blockquote {
+  border-left: 2px solid var(--border);
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  margin: 1.2rem 0;
+  color: #444;
+  font-style: italic;
+}
+
+.post-body img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 1.5rem auto;
+}
+.post-body figcaption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-body code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.85em;
+  background: var(--bg-subtle);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+.post-body pre {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  margin: 1.4rem 0;
+}
+.post-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4rem 0;
+  font-size: 0.88rem;
+}
+.post-body th, .post-body td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.post-body th { background: var(--bg-subtle); font-weight: 600; }
+
+/* KaTeX tweaks to match body font size */
+.post-body .katex { font-size: 1.05em; }
+.post-body .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; }
+
+.post-loading, .post-error {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 2rem 0;
+}
