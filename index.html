@@ -6,6 +6,11 @@
   <title>Ali Ahmadi</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Blog: math + code-block rendering (CDN, no build step) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/atom-one-light.min.css">
+  <link rel="stylesheet" href="blog/blog.css" />
 </head>
 <body>
 
@@ -17,6 +22,7 @@
       <li><a href="#about"    data-tab="about">About</a></li>
       <li><a href="#projects" data-tab="projects">Projects</a></li>
       <li><a href="#quotes"   data-tab="quotes">Quotes</a></li>
+      <li><a href="#blog"     data-tab="blog">Blog</a></li>
     </ul>
   </div>
 </nav>
@@ -214,11 +220,30 @@
     </ul>
   </section>
 
+  <section id="blog">
+    <div class="section-header">
+      <h2>Blog</h2>
+    </div>
+    <div id="blog-list" class="blog-list"></div>
+  </section>
+
+  <section id="post">
+    <a href="#blog" class="post-back">← Back to Blog</a>
+    <article id="post-content"></article>
+  </section>
+
 </main>
 
 <footer>
   <p>© 2025 Ali Ahmadi Roghabadi</p>
 </footer>
+
+<!-- Blog: markdown parser, syntax highlighting, LaTeX rendering (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="blog/blog.js"></script>
 
 <script src="main.js"></script>
 </body>
