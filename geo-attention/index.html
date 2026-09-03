@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo Attention</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Kerman, mapped</h1>
+    <span class="subtitle">Points of interest collected from Kerman, Iran &mdash; part of GeoAttention project</span>
+  </header>
+
+  <div class="app-body">
+    <aside class="sidebar">
+      <p class="lead">
+        Every point below was collected as raw location data &mdash; category, coordinates, and name.
+        This is the first layer of a larger project to score locations by what surrounds them.
+      </p>
+
+      <h2>Coverage</h2>
+      <p class="stat-line" id="stat-total"></p>
+
+      <h2>Categories</h2>
+      <div class="filter-actions">
+        <button id="show-all" type="button">Show all</button>
+        <button id="hide-all" type="button">Hide all</button>
+      </div>
+      <div class="group-list" id="group-list"></div>
+    </aside>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
