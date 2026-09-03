@@ -1,28 +1,28 @@
 :root {
-  --ink: #14110d;
-  --panel: #1c1811;
-  --panel-line: #37301f;
-  --text: #ece4d3;
-  --text-dim: #a89a7c;
-  --sand: #c9a227;
+  --ink: #faf7f0;
+  --panel: #f1ecdf;
+  --panel-line: #d8cfb5;
+  --text: #2b2418;
+  --text-dim: #766b52;
+  --sand: #a6791b;
   --clay: #b5502a;
 
-  --g-healthcare: #2f8f8b;
-  --g-food: #c9862b;
+  --g-healthcare: #22766f;
+  --g-food: #b06e1c;
   --g-retail-clothing: #b5502a;
-  --g-retail-general: #8a6d3b;
-  --g-beauty: #c97c9b;
-  --g-finance: #4c7a54;
-  --g-education: #4e6fa3;
-  --g-government: #7a6c93;
-  --g-automotive: #6e6659;
-  --g-home: #a0785a;
-  --g-lodging: #d4a24c;
-  --g-entertainment: #3e8e7e;
-  --g-professional: #5b7c99;
-  --g-industrial: #7a5c4e;
-  --g-agriculture: #6b8e4e;
-  --g-transportation: #a15843;
+  --g-retail-general: #74582a;
+  --g-beauty: #a85677;
+  --g-finance: #3f6b47;
+  --g-education: #3c5c8c;
+  --g-government: #675a80;
+  --g-automotive: #5c5648;
+  --g-home: #8a5f3f;
+  --g-lodging: #a97e26;
+  --g-entertainment: #2c7566;
+  --g-professional: #466685;
+  --g-industrial: #684838;
+  --g-agriculture: #547239;
+  --g-transportation: #8a4534;
 }
 
 * { box-sizing: border-box; }
