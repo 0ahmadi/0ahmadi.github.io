@@ -1,20 +1,20 @@
 const GROUP_COLORS = {
-  "Healthcare": "#2f8f8b",
-  "Food & Drink": "#c9862b",
+  "Healthcare": "#22766f",
+  "Food & Drink": "#b06e1c",
   "Retail - Clothing": "#b5502a",
-  "Retail - General": "#8a6d3b",
-  "Beauty & Personal Care": "#c97c9b",
-  "Finance": "#4c7a54",
-  "Education": "#4e6fa3",
-  "Government & Public": "#7a6c93",
-  "Automotive": "#6e6659",
-  "Home Improvement": "#a0785a",
-  "Lodging": "#d4a24c",
-  "Entertainment & Leisure": "#3e8e7e",
-  "Professional Services": "#5b7c99",
-  "Industrial": "#7a5c4e",
-  "Agriculture": "#6b8e4e",
-  "Transportation": "#a15843"
+  "Retail - General": "#74582a",
+  "Beauty & Personal Care": "#a85677",
+  "Finance": "#3f6b47",
+  "Education": "#3c5c8c",
+  "Government & Public": "#675a80",
+  "Automotive": "#5c5648",
+  "Home Improvement": "#8a5f3f",
+  "Lodging": "#a97e26",
+  "Entertainment & Leisure": "#2c7566",
+  "Professional Services": "#466685",
+  "Industrial": "#684838",
+  "Agriculture": "#547239",
+  "Transportation": "#8a4534"
 };
 const DEFAULT_COLOR = "#8a8a8a";
 
@@ -22,14 +22,23 @@ async function init() {
   const res = await fetch("data.json");
   const data = await res.json();
 
-  const map = L.map("map", { zoomControl: true }).setView(data.center, 13);
+  const kermanBounds = L.latLngBounds(
+    [30.10, 56.90],
+    [30.42, 57.25]
+  );
+
+  const map = L.map("map", {
+    zoomControl: true,
+    maxBounds: kermanBounds.pad(0.1),
+    maxBoundsViscosity: 0.8,
+    minZoom: 11
+  }).setView(data.center, 13);
 
   L.tileLayer(
-    "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
       attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: "abcd",
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 19
     }
   ).addTo(map);
