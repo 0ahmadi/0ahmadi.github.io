@@ -1,209 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ali Ahmadi</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ali Ahmadi</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png" />
+        <link rel="stylesheet" href="style.css" />
 
-  <!-- Blog: math + code-block rendering (CDN, no build step) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
-  <link rel="stylesheet" href="blog/blog.css" />
-</head>
-<body>
+        <!-- Blog: math + code-block rendering (CDN, no build step) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"
+        />
+        <link rel="stylesheet" href="blog/blog.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-inner">
+                <a class="nav-brand" href="#home" data-tab-brand>Ali Ahmadi</a>
+                <ul class="nav-links">
+                    <li><a href="#home" data-tab="home">Home</a></li>
+                    <!-- <li><a href="#about"    data-tab="about">About</a></li> -->
+                    <li><a href="#projects" data-tab="projects">Projects</a></li>
+                    <!-- <li><a href="#blog"     data-tab="blog">Blog</a></li> -->
+                </ul>
+            </div>
+        </nav>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-brand" href="#home" data-tab-brand>Ali Ahmadi</a>
-    <ul class="nav-links">
-      <li><a href="#home"     data-tab="home">Home</a></li>
-      <!-- <li><a href="#about"    data-tab="about">About</a></li> -->
-      <li><a href="#projects" data-tab="projects">Projects</a></li>
-      <!-- <li><a href="#blog"     data-tab="blog">Blog</a></li> -->
-    </ul>
-  </div>
-</nav>
+        <main>
+            <section id="home">
+                <div class="profile">
+                    <img class="profile-img" src="assets/prof_pic.png" alt="Ali Ahmadi Roghabadi" />
+                    <div class="profile-info">
+                        <h1>Ali Ahmadi Roghabadi</h1>
 
-<main>
+                        <div class="profile-links">
+                            <!-- Email -->
+                            <a href="mailto:ali.ahmadi9@ut.ac.ir" aria-label="Email">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 17.25V6.75M21.75 6.75L12 13.5 2.25 6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25"
+                                    />
+                                </svg>
+                                Email
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/0ahmadi" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0024 12C24 5.37 18.63 0 12 0z"
+                                    />
+                                </svg>
+                                GitHub
+                            </a>
+                            <!-- LinkedIn -->
+                            <a
+                                href="https://linkedin.com/in/aliahmdif"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="LinkedIn"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"
+                                    />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
 
-  <section id="home">
-    <div class="profile">
-      <img
-        class="profile-img"
-        src="assets/prof_pic.png"
-        alt="Ali Ahmadi Roghabadi"
-      />
-      <div class="profile-info">
-        <h1>Ali Ahmadi Roghabadi</h1>
+                        <p class="profile-bio">
+                            My research lies between computational neuroscience and continual learning, and my interest
+                            is developing systems that can learn and adapt over time. I am particularly interested in
+                            applying these ideas to robotics and large language models. Outside of research, I take part
+                            in competitive programming contests on
+                            <a href="https://codeforces.com" target="_blank" rel="noopener">Codeforces</a>, and I enjoy
+                            the process of problem solving.
+                        </p>
+                        <p class="profile-bio" style="margin-top: 0.75rem">
+                            I completed my bachelor's degree from University of Tehran, where I did my undergraduate
+                            project under the supervision of
+                            <a
+                                href="https://scholar.google.com/citations?user=NBD4tqgAAAAJ&hl=en"
+                                target="_blank"
+                                rel="noopener"
+                                >Dr. Hossein Aghababa</a
+                            >. Also, in the last two years of my bachelor's degree, I worked as a research assistant in
+                            the
+                            <a href="https://feng.ut.ac.ir/deep" target="_blank" rel="noopener">Deep Learning Lab</a>
+                            under the supervision of
+                            <a
+                                href="https://scholar.google.com/citations?user=YLOcZDUAAAAJ&hl=en"
+                                target="_blank"
+                                rel="noopener"
+                                >Dr. Kazem Fouladi</a
+                            >. During this time, I attended the 6th International Conference on Pattern Recognition and
+                            Image Analysis (IPRIA 2023) at the University of Tehran.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <div class="profile-links">
-          <!-- Email -->
-          <a href="mailto:ali.ahmadi9@ut.ac.ir" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 17.25V6.75M21.75 6.75L12 13.5 2.25 6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25" />
-            </svg>
-            Email
-          </a>
-          <!-- GitHub -->
-          <a href="https://github.com/0ahmadi" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0024 12C24 5.37 18.63 0 12 0z"/>
-            </svg>
-            GitHub
-          </a>
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/aliahmdif" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
-            </svg>
-            LinkedIn
-          </a>
-        </div>
+            <section id="about">
+                <h2>About</h2>
 
-        <p class="profile-bio">
-          My research lies between computational neuroscience and continual learning, and my interest is
-          developing systems that can learn and adapt over time. I am particularly interested in applying
-          these ideas to robotics and large language models. Outside of research, I take part in competitive programming contests on <a href="https://codeforces.com" target="_blank" rel="noopener">Codeforces</a>, and I enjoy the process of problem solving.
-        </p>
-        <p class="profile-bio" style="margin-top:0.75rem;">
-          I completed my bachelor's degree from University of Tehran, where I did my undergraduate project
-          under the supervision of
-          <a href="https://scholar.google.com/citations?user=NBD4tqgAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Hossein Aghababa</a>.
-          Also, in the last two years of my bachelor's degree, I worked as a research assistant in the
-          <a href="https://feng.ut.ac.ir/deep" target="_blank" rel="noopener">Deep Learning Lab</a>
-          under the supervision of
-          <a href="https://scholar.google.com/citations?user=YLOcZDUAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Kazem Fouladi</a>.
-          During this time, I attended the 6th International Conference on Pattern Recognition and Image
-          Analysis (IPRIA 2023) at the University of Tehran.
-        </p>
-      </div>
-    </div>
-  </section>
+                <div class="about-block">
+                    <h3>Research Interests</h3>
+                    <ul class="about-list">
+                        <li>Computational Neuroscience</li>
+                        <li>NeuroAI</li>
+                        <li>Continual Learning</li>
+                    </ul>
+                </div>
 
-  <section id="about">
-    <h2>About</h2>
+                <div class="about-block">
+                    <h2>Education</h2>
+                    <div class="edu-item">
+                        <div class="institution">University of Tehran — Tehran, Iran</div>
+                        <div class="degree">B.Sc. Computer Engineering, Department of Engineering</div>
+                        <div class="years">2021 – 2025</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="institution">Seyed Kamaleddin Mousavi Magnet High School — Kerman, Iran</div>
+                        <div class="degree">High School Diploma</div>
+                        <div class="years">2018 – 2021</div>
+                    </div>
+                </div>
 
-    <div class="about-block">
-      <h3>Research Interests</h3>
-      <ul class="about-list">
-        <li>Computational Neuroscience</li>
-        <li>NeuroAI</li>
-        <li>Continual Learning</li>
-      </ul>
-    </div>
+                <div class="about-block">
+                    <h2>Research Experience</h2>
 
-    <div class="about-block">
-      <h2>Education</h2>
-      <div class="edu-item">
-        <div class="institution">University of Tehran — Tehran, Iran</div>
-        <div class="degree">B.Sc. Computer Engineering, Department of Engineering</div>
-        <div class="years">2021 – 2025</div>
-      </div>
-      <div class="edu-item">
-        <div class="institution">Seyed Kamaleddin Mousavi Magnet High School — Kerman, Iran</div>
-        <div class="degree">High School Diploma</div>
-        <div class="years">2018 – 2021</div>
-      </div>
-    </div>
+                    <div class="exp-item">
+                        <div class="role">Research Assistant</div>
+                        <div class="org">
+                            <a href="https://feng.ut.ac.ir/deep" target="_blank" rel="noopener">Deep Learning Lab</a>,
+                            <a
+                                href="https://scholar.google.com/citations?user=YLOcZDUAAAAJ&hl=en"
+                                target="_blank"
+                                rel="noopener"
+                                >Dr. Kazem Fouladi</a
+                            >, University of Tehran
+                        </div>
+                        <div class="years">2023 – 2025</div>
+                    </div>
 
-    <div class="about-block">
-  <h2>Research Experience</h2>
+                    <div class="exp-item">
+                        <div class="role">Undergraduate Project</div>
+                        <div class="org">
+                            Supervised by
+                            <a
+                                href="https://scholar.google.com/citations?user=NBD4tqgAAAAJ&hl=en"
+                                target="_blank"
+                                rel="noopener"
+                                >Dr. Hossein Aghababa</a
+                            >, University of Tehran
+                        </div>
+                        <div class="years">2024 – 2025</div>
+                    </div>
+                </div>
+            </section>
 
-  <div class="exp-item">
-    <div class="role">Research Assistant</div>
-    <div class="org">
-      <a href="https://feng.ut.ac.ir/deep" target="_blank" rel="noopener">Deep Learning Lab</a>,
-      <a href="https://scholar.google.com/citations?user=YLOcZDUAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Kazem Fouladi</a>,
-      University of Tehran
-    </div>
-    <div class="years">2023 – 2025</div>
-  </div>
+            <section id="projects">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                </div>
 
-  <div class="exp-item">
-    <div class="role">Undergraduate Project</div>
-    <div class="org">
-      Supervised by
-      <a href="https://scholar.google.com/citations?user=NBD4tqgAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Hossein Aghababa</a>,
-      University of Tehran
-    </div>
-    <div class="years">2024 – 2025</div>
-  </div>
-</div>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <a href="https://github.com/0ahmadi/CNS-2026-summer-internship" target="_blank" rel="noopener">
+                            <img
+                                class="project-thumb"
+                                src="assets/neuroCLIP.png"
+                                alt="Network-Brain Representation Alignment"
+                                onerror="this.style.display='none'"
+                            />
+                        </a>
+                        <p class="project-text">
+                            <a
+                                class="project-title-link"
+                                href="https://github.com/0ahmadi/CNS-2026-summer-internship"
+                                target="_blank"
+                                rel="noopener"
+                                ><strong>NeuroCLIP: Network–Brain Representation Alignment</strong></a
+                            >
+                            — A summer internship project investigating whether a convolutional network trained only on
+                            natural images represents them the way the mouse visual cortex does. Using the Allen
+                            Institute Neuropixels dataset (four visual areas, 118 natural scene images), each layer of a
+                            pretrained AlexNet was compared against each brain area with representational similarity
+                            analysis (RSA) to see which layers best matched which areas. A CLIP-style contrastive model,
+                            NeuroCLIP, was then trained separately for every layer–area pair, allowing alignment to be
+                            learned rather than measured only with a fixed statistic.
+                        </p>
+                    </div>
 
-    
-  </section>
+                    <div class="project-item">
+                        <a href="https://github.com/0ahmadi/dermis" target="_blank" rel="noopener">
+                            <img
+                                class="project-thumb"
+                                src="assets/dermis.png"
+                                alt="Skin Lesion Classification"
+                                onerror="this.style.display='none'"
+                            />
+                        </a>
+                        <p class="project-text">
+                            <a
+                                class="project-title-link"
+                                href="https://github.com/0ahmadi/dermis"
+                                target="_blank"
+                                rel="noopener"
+                                ><strong>Skin Lesion Classification</strong></a
+                            >
+                            — This project is a lightweight, multi-modal deep learning model that classifies skin
+                            lesions from images into seven diagnostic categories from the HAM10000 dataset — melanoma,
+                            melanocytic nevi, basal cell carcinoma, actinic keratoses/Bowen's disease, benign
+                            keratosis-like lesions, dermatofibroma, and vascular lesions — while also taking the
+                            patient's age, sex, and lesion body location as additional inputs to make more clinically
+                            informed predictions than an image-only model. Built on a MobileNetV3 backbone, the model is
+                            designed with a deliberate focus on accuracy and efficiency alongside small resource usage
+                            rather than raw benchmark performance alone, making it lightweight enough to embed directly
+                            into mobile apps and run inference on-device, without depending on a server or cloud API for
+                            every prediction.
+                        </p>
+                    </div>
 
-  <section id="projects">
-    <div class="section-header">
-      <h2>Projects</h2>
-    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/0ahmadi/persian_speech_to_text" target="_blank" rel="noopener">
+                            <img
+                                class="project-thumb"
+                                src="assets/whisper-persian.png"
+                                alt="Persian ASR project"
+                                onerror="this.style.display='none'"
+                            />
+                        </a>
+                        <p class="project-text">
+                            <a
+                                class="project-title-link"
+                                href="https://github.com/0ahmadi/persian_speech_to_text"
+                                target="_blank"
+                                rel="noopener"
+                                ><strong>Whisper Fine-tuning</strong></a
+                            >
+                            — Fine-tuned OpenAI's Whisper model on Persian speech datasets to enhance automatic speech
+                            recognition (ASR) performance. This project was conducted at the Deep Learning Lab,
+                            University of Tehran.
+                        </p>
+                    </div>
+                </div>
 
-<div class="projects-list">
+                <p style="margin-top: 1.5rem; font-size: 0.82rem; color: var(--muted)">
+                    More on <a href="https://github.com/0ahmadi" target="_blank" rel="noopener">github.com/0ahmadi</a>
+                </p>
+            </section>
 
-  <div class="project-item">
-    <a href="https://github.com/0ahmadi/CNS-2026-summer-internship" target="_blank" rel="noopener">
-      <img class="project-thumb" src="assets/neuroCLIP.png" alt="Network-Brain Representation Alignment" onerror="this.style.display='none'" />
-    </a>
-    <p class="project-text">
-      <a class="project-title-link" href="https://github.com/0ahmadi/CNS-2026-summer-internship" target="_blank" rel="noopener"><strong>NeuroCLIP: Network–Brain Representation Alignment</strong></a> —
-      A summer internship project investigating whether a convolutional network trained only on natural images represents them the way the mouse visual cortex does. Using the Allen Institute Neuropixels dataset (four visual areas, 118 natural scene images), each layer of a pretrained AlexNet was compared against each brain area with representational similarity analysis (RSA) to see which layers best matched which areas. A CLIP-style contrastive model, NeuroCLIP, was then trained separately for every layer–area pair, allowing alignment to be learned rather than measured only with a fixed statistic.
-    </p>
-  </div>
+            <section id="blog">
+                <div class="section-header">
+                    <h2>Blog</h2>
+                </div>
+                <div id="blog-list" class="blog-list"></div>
+            </section>
 
-  <div class="project-item">
-    <a href="https://github.com/0ahmadi/dermis" target="_blank" rel="noopener">
-      <img class="project-thumb" src="assets/dermis.png" alt="Skin Lesion Classification" onerror="this.style.display='none'" />
-    </a>
-    <p class="project-text">
-      <a class="project-title-link" href="https://github.com/0ahmadi/dermis" target="_blank" rel="noopener"><strong>Skin Lesion Classification</strong></a> —
-      This project is a lightweight, multi-modal deep learning model that classifies skin lesions from images into seven diagnostic categories from the HAM10000 dataset — melanoma, melanocytic nevi, basal cell carcinoma, actinic keratoses/Bowen's disease, benign keratosis-like lesions, dermatofibroma, and vascular lesions — while also taking the patient's age, sex, and lesion body location as additional inputs to make more clinically informed predictions than an image-only model. Built on a MobileNetV3 backbone, the model is designed with a deliberate focus on accuracy and efficiency alongside small resource usage rather than raw benchmark performance alone, making it lightweight enough to embed directly into mobile apps and run inference on-device, without depending on a server or cloud API for every prediction.
-    </p>
-  </div>
+            <section id="post">
+                <a href="#blog" class="post-back">← Back to Blog</a>
+                <article id="post-content"></article>
+            </section>
+        </main>
 
-  <div class="project-item">
-    <a href="https://github.com/0ahmadi/persian_speech_to_text" target="_blank" rel="noopener">
-      <img class="project-thumb" src="assets/whisper-persian.png" alt="Persian ASR project" onerror="this.style.display='none'" />
-    </a>
-    <p class="project-text">
-      <a class="project-title-link" href="https://github.com/0ahmadi/persian_speech_to_text" target="_blank" rel="noopener"><strong>Whisper Fine-tuning</strong></a> —
-      Fine-tuned OpenAI's Whisper model on Persian speech datasets to enhance automatic speech recognition (ASR) performance. This project was conducted at the Deep Learning Lab, University of Tehran.
-    </p>
-  </div>
+        <footer>
+            <p>© 2025 Ali Ahmadi Roghabadi</p>
+        </footer>
 
-</div>
+        <!-- Blog: markdown parser, syntax highlighting, LaTeX rendering (CDN) -->
+        <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+        <script src="blog/blog.js"></script>
 
-    <p style="margin-top:1.5rem; font-size:0.82rem; color:var(--muted);">
-      More on <a href="https://github.com/0ahmadi" target="_blank" rel="noopener">github.com/0ahmadi</a>
-    </p>
-  </section>
-
-  <section id="blog">
-    <div class="section-header">
-      <h2>Blog</h2>
-    </div>
-    <div id="blog-list" class="blog-list"></div>
-  </section>
-
-  <section id="post">
-    <a href="#blog" class="post-back">← Back to Blog</a>
-    <article id="post-content"></article>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2025 Ali Ahmadi Roghabadi</p>
-</footer>
-
-<!-- Blog: markdown parser, syntax highlighting, LaTeX rendering (CDN) -->
-<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-<script src="blog/blog.js"></script>
-
-<script src="main.js"></script>
-</body>
+        <script src="main.js"></script>
+    </body>
 </html>
