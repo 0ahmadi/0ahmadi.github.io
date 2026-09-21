@@ -1,0 +1,161 @@
+\documentclass[10.5pt, letterpaper]{article}
+
+\usepackage{fontspec}
+\usepackage[left=0.75in, right=0.75in, top=0.6in, bottom=0.6in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{needspace}
+
+\setmainfont{texgyrepagella}[
+  Path = ./fonts/,
+  Extension = .otf,
+  UprightFont = *-regular,
+  BoldFont = *-bold,
+  ItalicFont = *-italic,
+  BoldItalicFont = *-bolditalic
+]
+\newfontfamily\headingfont{Poppins}[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
+
+\definecolor{darkgray}{RGB}{50,50,50}
+\definecolor{linkblue}{RGB}{0,90,160}
+\definecolor{accent}{RGB}{27,72,79}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue,
+    linkcolor=linkblue
+}
+\titleformat{\section}
+  {\headingfont\large\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+  [\vspace{2pt}{\color{accent}\titlerule[0.8pt]}]
+\titlespacing{\section}{0pt}{0.9em}{0.5em}
+
+\setlist[itemize]{leftmargin=1.1em, itemsep=0pt, topsep=2pt, parsep=0pt}
+
+
+\newcommand{\cvEntry}[4]{
+  \noindent\textbf{#1} \hfill \textit{#2}\\
+  \noindent\textit{#3} \hfill #4\\[0.15em]
+}
+
+\newcommand{\cvEntrySimple}[2]{
+  \noindent\textbf{#1} \hfill \textit{#2}\\
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{minipage}[t]{0.62\textwidth}
+    {\headingfont\LARGE \bfseries\color{accent} Ali Ahmadi}\\[0.15em]
+    {\normalsize M.Sc. in \textit{Computer Science}}\\[0.1em]
+    {\normalsize Sharif University of Technology, Tehran, Iran}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+    \raggedleft
+    \small
+    \textbullet\ \ \href{mailto:ali.ahmadi9@ut.ac.ir}{ali.ahmadi9@ut.ac.ir} \\[0.2em]
+    \textbullet\ \ \href{https://0ahmadi.github.io}{Website} \\[0.2em]
+    \textbullet\ \ \href{https://github.com/0ahmadi}{GitHub} \\[0.2em]
+    \textbullet\ \ \href{https://www.linkedin.com/in/aliahmdif}{LinkedIn}
+\end{minipage}
+
+\vspace{0.3em}
+\section{Education}
+
+\cvEntry{Master of Science in \textit{Computer Science}}{Sep 2026 -- Present}{Sharif University of Technology, Tehran, Iran}{}
+\cvEntry{Bachelor of Science in \textit{Computer Engineering}}{2021 -- 2025}{University of Tehran, Iran}{GPA: 15.79/20}
+\section{Technical Skills}
+
+\textbf{Programming Languages:} Python (Advanced), SQL (Proficient), C/C++ (Advanced), Golang (Intermediate).\\[0.3em]
+\textbf{Development Tools and Frameworks:} Git, Docker, PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas, Selenium, Matplotlib, etc.
+\section{Research Experience}
+
+\cvEntrySimple{Summer Research Intern}{Aug 5 -- Aug 26, 2026}
+
+\textit{NeuroCONNECT Academy (Community for Neuroscience and Cognitive Technologies), Iran}
+
+\textit{Supervised by Dr. Tahereh Toosi}
+
+\begin{itemize}
+    \item Conducted a short research project in computational neuroscience investigating whether pretrained vision-model representations predict neural population responses in mouse visual cortex.
+\end{itemize}
+
+\cvEntrySimple{Research Assistant}{2023 -- 2025}
+\textit{Deep Learning Lab, University of Tehran, Iran, Supervisor: Dr. Kazem Fouladi}
+\begin{itemize}
+    \item Applied machine learning and deep learning techniques to fine-tune large language and speech models for research and real-world applications.
+    \item Fine-tuned OpenAI's Whisper model for Persian automatic speech recognition using large-scale Persian speech datasets.
+    \item Developed and maintained the laboratory's MLOps infrastructure, including local AI training environments, multi-GPU training pipelines, and scalable machine learning workflows.
+\end{itemize}
+
+\section{Selected Projects}
+
+\textbf{NeuroCLIP: Aligning Vision-Model and Neural Representations}
+\begin{itemize}
+    \item Used representational similarity analysis (RSA) to compare AlexNet layer activations with mouse visual cortex responses (Allen Institute Visual Coding Neuropixels dataset), finding statistically significant but modest similarity across four cortical areas.
+    \item Designed NeuroCLIP, a CLIP-inspired contrastive framework that learns to align vision-model activations with neural responses in a shared embedding space, addressing overfitting from limited trial data via trial- and image-level augmentation.
+\end{itemize}
+
+\textbf{Whisper Fine-tuning} \href{https://github.com/0ahmadi/persian_speech_to_text}{\textit{link}}
+\begin{itemize}
+    \item Fine-tuned OpenAI's Whisper model on Persian speech datasets to improve automatic speech recognition (ASR) performance as part of a research project at the Deep Learning Lab, University of Tehran.
+    \item Implemented parallel multi-GPU training to fine-tune large-scale models whose memory requirements exceeded the VRAM capacity of a single GPU.
+\end{itemize}
+
+\textbf{Skin Lesion Classification} \href{https://github.com/0ahmadi/dermis}{\textit{link}}
+\begin{itemize}
+    \item A lightweight model that predicts skin cancer type from an image plus patient age, sex, and body location.
+    \item Designed the model using MobileNetV3 to achieve high efficiency and a small memory footprint, making it suitable for resource-constrained mobile devices.
+\end{itemize}
+
+
+\needspace{6\baselineskip}
+\section{Teaching Experience}
+
+\cvEntrySimple{Teaching Assistant, Algorithm Design}{Feb 2024 – Jan 2025}
+\textit{Dr. Kazem Fouladi}
+\begin{itemize}
+    \item Designed assignments and programming challenges, and assisted with course activities.
+\end{itemize}
+
+\cvEntrySimple{Teaching Assistant, Advanced Programming}{Feb 2024 – Jun 2024}
+\textit{Dr. Razieh Ghiasi}
+\begin{itemize}
+    \item Designed quiz problems, graded assignments, and conducted problem-solving sessions.
+\end{itemize}
+
+\cvEntrySimple{Teaching Assistant, Artificial Intelligence}{Feb 2024 – Jun 2024}
+\textit{Dr. Kazem Fouladi}
+\begin{itemize}
+    \item Designed assignments, graded coursework, and led tutorial sessions.
+\end{itemize}
+\section{Honors and Memberships}
+
+\begin{itemize}
+    \item \textbf{Honorary Invited Member}, Iranian Society of Machine Vision and Image Processing (ISMVIP) \hfill 2026--Present
+    \item Ranked in the top 1\% nationwide in Iran's National University Entrance Exam (Konkur) for undergraduate admission.
+    \item Ranked in the top 0.5\% nationwide in Iran's National University Entrance Exam (Konkur) for graduate (Master's) admission.
+    \item Ranked among the top 10 competitive programmers on the Quera platform, Iran.
+    \item Completed two academic years of school curriculum in a single year through an accelerated study track.
+\end{itemize}
+\section{Languages}
+
+Persian (Native)\\
+English (Intermediate) (Studying for the TOEFL exam)
+
+\end{document}
