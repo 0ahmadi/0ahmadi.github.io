@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Ahmadi – CV</title>
+  <style>
+    body { margin: 0; background: #e9ecef; font-family: system-ui, sans-serif; }
+    header { display: flex; justify-content: space-between; padding: 12px 20px; background: #fff; }
+    header a { color: #1b484f; text-decoration: none; font-weight: 600; }
+    #pages { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px; }
+    canvas { width: min(100%, 850px); height: auto; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/">← Home</a>
+    <a href="cv.pdf" download>Download PDF</a>
+  </header>
+  <div id="pages"></div>
+
+  <script type="module">
+    import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.min.mjs";
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.worker.min.mjs";
+
+    const pdf = await pdfjsLib.getDocument("cv.pdf").promise;
+    const container = document.getElementById("pages");
+
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const viewport = page.getViewport({ scale: 2 });
+      const canvas = document.createElement("canvas");
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      container.appendChild(canvas);
+      await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+    }
+  </script>
+</body>
+</html>
